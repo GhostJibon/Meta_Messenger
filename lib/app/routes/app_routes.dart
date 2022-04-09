@@ -7,6 +7,7 @@ abstract class Routes {
   static const CHATBOX = _Paths.CHATBOX;
   static const MESSAGEOTHERS = _Paths.MESSAGEOTHERS;
   static const MESSAGE = _Paths.MESSAGE;
+  static const EXPLORE = _Paths.EXPLORE;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const CHATBOX = '/chatbox';
   static const MESSAGEOTHERS = '/messageothers';
   static const MESSAGE = '/message';
+  static const EXPLORE = '/explore';
 }

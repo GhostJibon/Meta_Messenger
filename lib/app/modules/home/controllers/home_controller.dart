@@ -13,7 +13,7 @@ class HomeController extends GetxController
   void onInit() {
     super.onInit();
     pageController = PageController();
-    tabController = TabController(length: 2, vsync: this);
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override

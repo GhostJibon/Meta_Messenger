@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../controllers/chatbox_controller.dart';
 
-class ChatboxView extends GetView<ChatboxController> {
+import 'package:get/get.dart';
+
+import '../controllers/explore_controller.dart';
+
+class ExploreView extends GetView<ExploreController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ChatboxView'),
+        title: Text('ExploreView'),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          'ChatboxView is working',
+          'ExploreView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

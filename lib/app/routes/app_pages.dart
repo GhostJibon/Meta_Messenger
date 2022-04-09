@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/chatbox/bindings/chatbox_binding.dart';
 import '../modules/chatbox/views/chatbox_view.dart';
+import '../modules/explore/bindings/explore_binding.dart';
+import '../modules/explore/views/explore_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/message/bindings/message_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.MESSAGE,
       page: () => MessageView(),
       binding: MessageBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXPLORE,
+      page: () => ExploreView(),
+      binding: ExploreBinding(),
     ),
   ];
 }
