@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:messengerclone/app/common/fbColorText.dart';
+import 'package:messengerclone/app/common/newgroup&call.dart';
 import 'package:messengerclone/app/common/postDevider.dart';
+import 'package:messengerclone/app/common/suggestedPerson.dart';
 
 import '../controllers/messageothers_controller.dart';
 
@@ -86,29 +88,42 @@ class MessageothersView extends GetView<MessageothersController> {
               ),
             ),
             PostDevider(),
+            Padding(
+              padding: EdgeInsets.only(top: 10.h, left: 10.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 5.h),
+                    child: Text(
+                      'Suggested',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13.sp,
+                          color: Color(0xff555555)),
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      SuggestedPerson(
+                          'assets/images/profilepic.png', 'Rockey Parker'),
+                      SuggestedPerson(
+                          'assets/images/profilepic.png', 'Rockey Parker'),
+                      SuggestedPerson(
+                          'assets/images/profilepic.png', 'Rockey Parker'),
+                      SuggestedPerson(
+                          'assets/images/profilepic.png', 'Rockey Parker'),
+                      SuggestedPerson(
+                          'assets/images/profilepic.png', 'Rockey Parker'),
+                      SuggestedPerson(
+                          'assets/images/profilepic.png', 'Rockey Parker'),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class GroupAndCall extends StatelessWidget {
-  GroupAndCall(this.logolocation, this.texts);
-  final String logolocation;
-  final String texts;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 5.h),
-      child: Row(
-        children: [
-          Image.asset(logolocation),
-          Padding(
-            padding: EdgeInsets.only(left: 10.w),
-            child: FbColorText(texts, 15.sp, FontWeight.w700),
-          )
-        ],
       ),
     );
   }

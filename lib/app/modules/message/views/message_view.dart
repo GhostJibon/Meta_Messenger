@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:messengerclone/app/common/onlinepreson.dart';
 import 'package:messengerclone/app/common/personmessage.dart';
+import 'package:messengerclone/app/routes/app_pages.dart';
 
 import '../controllers/message_controller.dart';
 
@@ -56,9 +57,10 @@ class MessageView extends GetView<MessageController> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(7),
                             color: Color(0xffEEEEEE)),
-                        child: Icon(
-                          Icons.camera,
-                          size: 28.sp,
+                        child: Image.asset(
+                          'assets/images/cameraicon.png',
+                          height: 25.h,
+                          width: 25.h,
                         ),
                       ),
                     ),
@@ -68,9 +70,10 @@ class MessageView extends GetView<MessageController> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7),
                           color: Color(0xffEEEEEE)),
-                      child: Icon(
-                        Icons.camera,
-                        size: 28.sp,
+                      child: Image.asset(
+                        'assets/images/editicon.png',
+                        height: 25.h,
+                        width: 25.h,
                       ),
                     ),
                   ],
@@ -153,13 +156,27 @@ class MessageView extends GetView<MessageController> {
                         ],
                       ),
                     ),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
+                      Get.offNamed(Routes.CHATBOX);
+                    }),
                   ],
                 ),
               ),
