@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:messengerclone/app/routes/app_pages.dart';
+import 'package:messengerclone/app/common/directmessage.dart';
 
 class Chatperson extends StatelessWidget {
   Chatperson(this.personProfilePic, this.personName, this.personMessage);
@@ -15,7 +15,7 @@ class Chatperson extends StatelessWidget {
       padding: EdgeInsets.only(left: 20.w, top: 5.h, bottom: 5.h, right: 20.w),
       child: GestureDetector(
         onTap: () {
-          Get.toNamed(Routes.CHATBOX);
+          Get.to(DirectMessage(personName, personProfilePic));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

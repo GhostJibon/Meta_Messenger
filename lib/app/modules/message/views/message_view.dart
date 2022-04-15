@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:messengerclone/app/common/directmessage.dart';
 import 'package:messengerclone/app/common/onlinepreson.dart';
 import 'package:messengerclone/app/common/personmessage.dart';
 import 'package:messengerclone/app/routes/app_pages.dart';
@@ -156,27 +157,13 @@ class MessageView extends GetView<MessageController> {
                         ],
                       ),
                     ),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
-                    OnlinePerson('assets/images/profilepic.png', 'Vish', () {
-                      Get.offNamed(Routes.CHATBOX);
-                    }),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
+                    OnlinePerson('assets/images/profilepic.png', 'Vish'),
                   ],
                 ),
               ),

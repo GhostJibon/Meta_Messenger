@@ -4,7 +4,6 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
-  static const CHATBOX = _Paths.CHATBOX;
   static const MESSAGEOTHERS = _Paths.MESSAGEOTHERS;
   static const MESSAGE = _Paths.MESSAGE;
   static const EXPLORE = _Paths.EXPLORE;
@@ -13,7 +12,6 @@ abstract class Routes {
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
-  static const CHATBOX = '/chatbox';
   static const MESSAGEOTHERS = '/messageothers';
   static const MESSAGE = '/message';
   static const EXPLORE = '/explore';

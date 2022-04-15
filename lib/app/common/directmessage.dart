@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:messengerclone/app/common/chaticons.dart';
+import 'package:messengerclone/app/common/mprofile.dart';
 import 'package:messengerclone/app/routes/app_pages.dart';
-import '../controllers/chatbox_controller.dart';
 
-class ChatboxView extends GetView<ChatboxController> {
+class DirectMessage extends StatelessWidget {
+  DirectMessage(this.personname, this.profilepic);
+  final String personname;
+  final String profilepic;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
+        automaticallyImplyLeading: false,
         flexibleSpace: SafeArea(
           child: Padding(
             padding: EdgeInsets.only(left: 10.w, right: 20.w, top: 10.h),
@@ -30,35 +35,46 @@ class ChatboxView extends GetView<ChatboxController> {
                         color: Color(0xff0584FE),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10.w),
-                      child: Container(
-                        height: 35.h,
-                        width: 35.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.h),
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/profilepic.png'),
-                            fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(MProfile(profilepic, personname));
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(right: 10.w),
+                            child: Container(
+                              height: 35.h,
+                              width: 35.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.h),
+                                image: DecorationImage(
+                                  image: AssetImage(profilepic),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                personname,
+                                style: TextStyle(
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                'Messenger',
+                                style: TextStyle(
+                                    fontSize: 12.sp,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Rockey vickye',
-                          style: TextStyle(
-                              fontSize: 18.sp, fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          'Messenger',
-                          style: TextStyle(
-                              fontSize: 12.sp, fontWeight: FontWeight.w400),
-                        ),
-                      ],
                     ),
                   ],
                 ),
@@ -133,19 +149,6 @@ class ChatboxView extends GetView<ChatboxController> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class BottomIcons extends StatelessWidget {
-  BottomIcons(this.iconlocation);
-  final String iconlocation;
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset(
-      iconlocation,
-      height: 25.w,
-      width: 25.w,
     );
   }
 }

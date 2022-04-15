@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:messengerclone/app/common/directmessage.dart';
 
 class OnlinePerson extends StatelessWidget {
-  OnlinePerson(this.imagelocation, this.personname, this.ontap);
+  OnlinePerson(
+    this.imagelocation,
+    this.personname,
+  );
   final String imagelocation;
   final String personname;
-  final Function() ontap;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(right: 5.w),
       child: GestureDetector(
-        onTap: ontap,
+        onTap: () {
+          Get.to(DirectMessage(personname, imagelocation));
+        },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
